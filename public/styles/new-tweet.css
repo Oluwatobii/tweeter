@@ -1,0 +1,21 @@
+.buttton-char {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+button {
+  font-family: "Bungee", cursive;
+  background-color: blue;
+  color: #ffffff;
+}
+
+.hidden {
+  display: none;
+}
+
+textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+}

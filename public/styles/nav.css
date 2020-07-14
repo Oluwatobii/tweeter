@@ -1,0 +1,14 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em;
+  font-family: "Bungee", cursive;
+  height: 120px;
+  width: 100%;
+  background-color: #4056a1;
+  color: #ffffff;
+}
+
+#new-tweet {
+  font-family: "Source Sans Pro", sans-serif;
+}
