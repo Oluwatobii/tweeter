@@ -1,4 +1,4 @@
-header {
+.main-header {
   border: 0px solid green;
   display: flex;
   flex-direction: column;
@@ -9,4 +9,5 @@ header {
   padding: 0;
   height: 400px;
   width: 100%;
+  margin-top: 120px;
 }

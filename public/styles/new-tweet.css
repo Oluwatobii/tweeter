@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-button {
+.button {
   font-family: "Bungee", cursive;
   background-color: blue;
   color: #ffffff;
@@ -14,8 +14,12 @@ button {
   display: none;
 }
 
-textarea {
+.textarea {
   width: 100%;
   border: none;
   border-bottom: 1px solid black;
+}
+
+.changeToRed {
+  color: red;
 }
