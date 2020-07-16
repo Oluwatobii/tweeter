@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+// Adding new tweets to the page
 const renderTweets = function (tweetsArray) {
   // loops through tweets
   tweetsArray.forEach((tweets) => {
@@ -14,12 +15,14 @@ const renderTweets = function (tweetsArray) {
   });
 };
 
+// Cross-site scripting
 function htmlEncode(str) {
   return String(str).replace(/[^\w. ]/gi, function (c) {
     return "&#" + c.charCodeAt(0) + ";";
   });
 }
 
+// Function for Tweet to be prepended
 const createTweetElement = function (tweetData) {
   const $newTweet = `
   <article class="article-tweet">
@@ -51,6 +54,7 @@ const createTweetElement = function (tweetData) {
   return $newTweet;
 };
 
+// When the document is ready
 $(document).ready(function () {
   //Fetching tweets with Ajax
   const loadTweets = function () {
@@ -70,12 +74,17 @@ $(document).ready(function () {
     const myData = $(this).serialize();
     const myDataVal = $("#tweet-text").val().length;
 
+    // Things to do with the response
+    // Handling edge cases;
+    // If tweeting without any character written
     if (myDataVal === 0) {
       $("#empty-box").slideDown(200, function () {});
       $("#long-tweet").slideUp(200, function () {});
+      // If tweeting over the character limit
     } else if (myDataVal > 140) {
       $("#long-tweet").slideDown(200, function () {});
       $("#empty-box").slideUp(200, function () {});
+      // Requirement met
     } else {
       $.ajax({
         type: "POST",

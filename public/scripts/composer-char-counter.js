@@ -1,3 +1,4 @@
+// Counting the character limit
 $(document).ready(function () {
   // --- our code goes here ---
   const max = 140;
