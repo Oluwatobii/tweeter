@@ -40,9 +40,9 @@ const createTweetElement = function (tweetData) {
               <p>${String(new Date(tweetData.created_at)).slice(3, 15)}</p>
             </div>
             <div>
-              <img class="footer-img" src="/images/flag.png" />
-              <img class="footer-img" src="/images/retweet.png" />
-              <img class="footer-img" src="/images/like.png" />
+              <i class="fas fa-flag"></i>
+              <i class="fas fa-retweet"></i>
+              <i class="fas fa-heart"></i>
             </div>
           </footer>
         </article>

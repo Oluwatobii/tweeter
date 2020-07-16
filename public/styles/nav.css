@@ -11,6 +11,16 @@ nav {
   color: #ffffff;
 }
 
+.arrow-header {
+  display: flex;
+  flex-direction: column;
+}
+
+#arrow-point {
+  padding-left: 70px;
+  color: red;
+}
+
 #new-tweet {
   font-family: "Source Sans Pro", sans-serif;
   justify-content: center;
