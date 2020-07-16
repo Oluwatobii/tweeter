@@ -5,7 +5,7 @@
  */
 
 // Adding new tweets to the page
-const renderTweets = function (tweetsArray) {
+const renderTweets = function(tweetsArray) {
   // loops through tweets
   tweetsArray.forEach((tweets) => {
     // calls createTweetElement for each tweet
@@ -17,13 +17,13 @@ const renderTweets = function (tweetsArray) {
 
 // Cross-site scripting
 function htmlEncode(str) {
-  return String(str).replace(/[^\w. ]/gi, function (c) {
+  return String(str).replace(/[^\w. ]/gi, function(c) {
     return "&#" + c.charCodeAt(0) + ";";
   });
 }
 
 // Function for Tweet to be prepended
-const createTweetElement = function (tweetData) {
+const createTweetElement = function(tweetData) {
   const $newTweet = `
   <article class="article-tweet">
           <header class="tweet-header">
@@ -55,9 +55,9 @@ const createTweetElement = function (tweetData) {
 };
 
 // When the document is ready
-$(document).ready(function () {
+$(document).ready(function() {
   //Fetching tweets with Ajax
-  const loadTweets = function () {
+  const loadTweets = function() {
     $("#tweet-container").empty();
     $.ajax({
       type: "GET",
@@ -69,7 +69,7 @@ $(document).ready(function () {
   loadTweets();
 
   //Form Submission using JQuery
-  $("#target").submit(function (event) {
+  $("#target").submit(function(event) {
     event.preventDefault();
     const myData = $(this).serialize();
     const myDataVal = $("#tweet-text").val().length;
@@ -78,12 +78,12 @@ $(document).ready(function () {
     // Handling edge cases;
     // If tweeting without any character written
     if (myDataVal === 0) {
-      $("#empty-box").slideDown(200, function () {});
-      $("#long-tweet").slideUp(200, function () {});
+      $("#empty-box").slideDown(200, function() {});
+      $("#long-tweet").slideUp(200, function() {});
       // If tweeting over the character limit
     } else if (myDataVal > 140) {
-      $("#long-tweet").slideDown(200, function () {});
-      $("#empty-box").slideUp(200, function () {});
+      $("#long-tweet").slideDown(200, function() {});
+      $("#empty-box").slideUp(200, function() {});
       // Requirement met
     } else {
       $.ajax({
@@ -94,8 +94,8 @@ $(document).ready(function () {
         loadTweets();
         $("#tweet-text").val("");
         $(".counter").val("140");
-        $("#empty-box").slideUp(200, function () {});
-        $("#long-tweet").slideUp(200, function () {});
+        $("#empty-box").slideUp(200, function() {});
+        $("#long-tweet").slideUp(200, function() {});
       });
     }
   });

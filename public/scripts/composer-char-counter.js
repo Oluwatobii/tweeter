@@ -1,5 +1,5 @@
 // Counting the character limit
-$(document).ready(function () {
+$(document).ready(function() {
   // --- our code goes here ---
   const max = 140;
   $("#tweet-text").on("input", updateCount);
