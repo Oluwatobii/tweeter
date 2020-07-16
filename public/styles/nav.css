@@ -13,4 +13,28 @@ nav {
 
 #new-tweet {
   font-family: "Source Sans Pro", sans-serif;
+  justify-content: center;
+}
+
+#long-tweet {
+  border: 2px solid red;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 3px;
+  text-align: center;
+  width: 100%;
+  display: none;
+}
+
+#empty-box {
+  border: 2px solid red;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 3px;
+  text-align: center;
+  width: 100%;
+  display: none;
+}
+
+.error {
+  width: 30px;
+  height: 30px;
 }
