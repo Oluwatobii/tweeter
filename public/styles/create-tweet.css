@@ -5,12 +5,24 @@
   padding: 20px;
 }
 
+.widgets {
+  display: none;
+}
+
 .article-tweet:hover {
   box-shadow: 10px 5px 5px grey;
 }
 
 .article-tweet:hover .tweet {
   font-weight: 700;
+}
+
+.article-tweet:hover .user-handle {
+  opacity: 0.9;
+}
+
+.article-tweet:hover .widgets {
+  display: inline;
 }
 
 .tweet-header {

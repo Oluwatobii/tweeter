@@ -39,7 +39,7 @@ const createTweetElement = function (tweetData) {
             <div>
               <p>${String(new Date(tweetData.created_at)).slice(3, 15)}</p>
             </div>
-            <div>
+            <div class='widgets'>
               <i class="fas fa-flag"></i>
               <i class="fas fa-retweet"></i>
               <i class="fas fa-heart"></i>

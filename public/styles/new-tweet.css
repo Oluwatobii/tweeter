@@ -23,3 +23,11 @@
 .changeToRed {
   color: red;
 }
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    /* TRouBLe */
+    margin: 120px 50px auto 50px;
+    width: 67%;
+  }
+}

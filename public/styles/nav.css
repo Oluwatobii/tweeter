@@ -1,4 +1,4 @@
-nav {
+.main-nav {
   position: fixed;
   top: 0;
   display: flex;
@@ -47,4 +47,12 @@ nav {
 .error {
   width: 30px;
   height: 30px;
+}
+
+/* Tablet Styles */
+@media only screen and (max-width: 1024px) {
+  .main-nav {
+    background-color: #d89721;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  }
 }

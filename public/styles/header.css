@@ -11,3 +11,16 @@
   width: 100%;
   margin-top: 120px;
 }
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  .main-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .main-header {
+    /* TRouBLe */
+    margin: 150px 50px auto 50px;
+    width: 33%;
+  }
+}
