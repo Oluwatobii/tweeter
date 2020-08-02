@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./TweetForm.css";
 
 export const TweetForm = () => {
+  const [tweetText, setTweetText] = useState("");
+  const tweetRemainingLength = 140 - tweetText.length;
+  const outputStyle = { color: tweetRemainingLength >= 0 ? "black" : "red" };
+  const submitTweet = (event) => {
+    event.preventDefault();
+  };
   return (
     <section className="new-tweet">
       <h2>Compose Tweet</h2>
@@ -21,6 +27,8 @@ export const TweetForm = () => {
           What are you humming about?
         </label>
         <textarea
+          value={tweetText}
+          onChange={(event) => setTweetText(event.target.value)}
           className="textarea"
           name="text"
           id="tweet-text"
@@ -30,8 +38,13 @@ export const TweetForm = () => {
           <button id="create-new-tweet" className="button" type="submit">
             Tweet
           </button>
-          <output name="counter" className="counter" for="tweet-text">
-            140
+          <output
+            style={outputStyle}
+            name="counter"
+            className="counter"
+            for="tweet-text"
+          >
+            {tweetRemainingLength}
           </output>
         </div>
       </form>
