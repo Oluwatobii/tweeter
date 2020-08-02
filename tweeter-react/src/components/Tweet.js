@@ -1,22 +1,25 @@
 import React from "react";
 import "./Tweet.css";
+// import "./all.min.css";
+// import "./fontawesome.min.css";
 
-export const Tweet = () => {
+export const Tweet = (props) => {
+  const { name, handle, text, profile_image, date } = props;
   return (
     <article class="article-tweet">
       <header class="tweet-header">
         <div class="user-info">
-          <img class="header-img" src="${tweetData.user.avatars}" />
-          <p>Oluwatobi Bello</p>
+          <img class="header-img" src={profile_image} />
+          <p>{name}</p>
         </div>
         <div>
-          <h4 class="user-handle">@Darkister</h4>
+          <h4 class="user-handle">{handle}</h4>
         </div>
       </header>
-      <p class="tweet">What do you think of the latest one piece chapter</p>
+      <p class="tweet">{text}</p>
       <footer class="tweet-footer">
         <div>
-          <p>1 hour ago</p>
+          <p>{date}</p>
         </div>
         <div class="widgets">
           <i class="fas fa-flag"></i>
