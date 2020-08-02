@@ -6,25 +6,25 @@ import "./Tweet.css";
 export const Tweet = (props) => {
   const { name, handle, text, profile_image, date } = props;
   return (
-    <article class="article-tweet">
-      <header class="tweet-header">
-        <div class="user-info">
-          <img class="header-img" src={profile_image} />
+    <article className="article-tweet">
+      <header className="tweet-header">
+        <div className="user-info">
+          <img className="header-img" src={profile_image} />
           <p>{name}</p>
         </div>
         <div>
-          <h4 class="user-handle">{handle}</h4>
+          <h4 className="user-handle">{handle}</h4>
         </div>
       </header>
-      <p class="tweet">{text}</p>
-      <footer class="tweet-footer">
+      <p className="tweet">{text}</p>
+      <footer className="tweet-footer">
         <div>
           <p>{date}</p>
         </div>
-        <div class="widgets">
-          <i class="fas fa-flag"></i>
-          <i class="fas fa-retweet"></i>
-          <i class="fas fa-heart"></i>
+        <div className="widgets">
+          <i className="fas fa-flag"></i>
+          <i className="fas fa-retweet"></i>
+          <i className="fas fa-heart"></i>
         </div>
       </footer>
     </article>

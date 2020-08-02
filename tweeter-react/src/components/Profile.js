@@ -3,7 +3,7 @@ import "./Profile.css";
 
 export const Profile = () => {
   return (
-    <header class="main-header">
+    <header className="main-header">
       <div>
         <img src="/profile-hex.png" />
       </div>

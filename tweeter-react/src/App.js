@@ -37,9 +37,10 @@ const tweetsData = [
 ];
 
 function App() {
-  const tweets = tweetsData.map((tweetData) => {
+  const tweets = tweetsData.map((tweetData, index) => {
     return (
       <Tweet
+        key={index}
         name={tweetData.name}
         handle={tweetData.handle}
         text={tweetData.text}

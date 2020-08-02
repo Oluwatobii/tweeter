@@ -3,16 +3,16 @@ import "./Navigation.css";
 
 export const Navigation = () => {
   return (
-    <nav class="main-nav">
+    <nav className="main-nav">
       <div>tweeter</div>
-      <div class="arrow-header">
+      <div className="arrow-header">
         <span id="new-tweet">
           {" "}
           <strong>Write</strong> a new tweet
         </span>
         <span id="arrow-point">
           {" "}
-          <i class="fas fa-angle-double-down"></i>{" "}
+          <i className="fas fa-angle-double-down"></i>{" "}
         </span>
       </div>
     </nav>
