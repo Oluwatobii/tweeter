@@ -20,20 +20,6 @@ const initialTweetData = [
     text: "Hello World",
     date: "1 hour ago",
   },
-  {
-    name: "Oluwatobi Bello",
-    handle: "@Darkister",
-    profile_image: "https://i.imgur.com/73hZDYK.png",
-    text: "What do you think of One Piece Chapter 986",
-    date: "50 mins ago",
-  },
-  {
-    name: "Bola Aransiola",
-    handle: "@Hafsoh",
-    profile_image: "https://i.imgur.com/73hZDYK.png",
-    text: "Hello World",
-    date: "1 hour ago",
-  },
 ];
 
 function App() {
@@ -51,12 +37,12 @@ function App() {
     );
   });
 
-  const addNewTweet = () => {
+  const addNewTweet = (text) => {
     const newTweet = {
-      name: "Bola Aransiola",
-      handle: "@Hafsoh",
+      name: "Oluwatobi Bello",
+      handle: "@Darkister",
       profile_image: "https://i.imgur.com/73hZDYK.png",
-      text: "Hello World",
+      text,
       date: "1 hour ago",
     };
 
@@ -64,11 +50,11 @@ function App() {
   };
 
   return (
-    <div className="main-container" onClick={addNewTweet}>
+    <div className="main-container">
       <Navigation />
       <Profile />
       <main class="container">
-        <TweetForm />
+        <TweetForm addNewTweet={addNewTweet} />
         <section className="tweet-container">{tweets}</section>
       </main>
     </div>

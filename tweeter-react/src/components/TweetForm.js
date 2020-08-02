@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import "./TweetForm.css";
 
-export const TweetForm = () => {
+export const TweetForm = (props) => {
+  const { addNewTweet } = props;
   const [tweetText, setTweetText] = useState("");
   const tweetRemainingLength = 140 - tweetText.length;
   const outputStyle = { color: tweetRemainingLength >= 0 ? "black" : "red" };
   const submitTweet = (event) => {
     event.preventDefault();
+    if (tweetRemainingLength >= 0 && tweetRemainingLength < 140) {
+      addNewTweet(tweetText);
+      setTweetText("");
+    }
   };
   return (
     <section className="new-tweet">
@@ -22,7 +27,13 @@ export const TweetForm = () => {
         character limit
         <img className="error" src="/images/error.png" />
       </h4>
-      <form id="target" className="form-inline" action="/tweets" method="POST">
+      <form
+        onSubmit={submitTweet}
+        id="target"
+        className="form-inline"
+        action="/tweets"
+        method="POST"
+      >
         <label className="hidden" for="tweet-text">
           What are you humming about?
         </label>
