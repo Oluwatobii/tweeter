@@ -7,11 +7,13 @@ import { Tweet } from "./components/Tweet";
 
 function App() {
   return (
-    <div className="App">
+    <div className="main-container">
       <Navigation />
       <Profile />
-      <TweetForm />
-      <Tweet />
+      <main class="container">
+        <TweetForm />
+        <Tweet />
+      </main>
     </div>
   );
 }

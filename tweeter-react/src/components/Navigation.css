@@ -1,0 +1,58 @@
+.main-nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em;
+  font-family: "Bungee", cursive;
+  height: 120px;
+  width: 100%;
+  background-color: #4056a1;
+  color: #ffffff;
+}
+
+.arrow-header {
+  display: flex;
+  flex-direction: column;
+}
+
+#arrow-point {
+  padding-left: 70px;
+  color: red;
+}
+
+#new-tweet {
+  font-family: "Source Sans Pro", sans-serif;
+  justify-content: center;
+}
+
+#long-tweet {
+  border: 2px solid red;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 3px;
+  text-align: center;
+  width: 100%;
+  display: none;
+}
+
+#empty-box {
+  border: 2px solid red;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 3px;
+  text-align: center;
+  width: 100%;
+  display: none;
+}
+
+.error {
+  width: 30px;
+  height: 30px;
+}
+
+/* Tablet Styles */
+@media only screen and (max-width: 1024px) {
+  .main-nav {
+    background-color: #d89721;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  }
+}

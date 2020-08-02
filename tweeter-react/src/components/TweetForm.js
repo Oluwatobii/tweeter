@@ -1,4 +1,5 @@
 import React from "react";
+import "./TweetForm.css";
 
 export const TweetForm = () => {
   return (

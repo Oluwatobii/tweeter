@@ -1,0 +1,33 @@
+.buttton-char {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.button {
+  font-family: "Bungee", cursive;
+  background-color: blue;
+  color: #ffffff;
+}
+
+.hidden {
+  display: none;
+}
+
+.textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.changeToRed {
+  color: red;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    /* TRouBLe */
+    margin: 120px 50px auto 50px;
+    width: 67%;
+  }
+}

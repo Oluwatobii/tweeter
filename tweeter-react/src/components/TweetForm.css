@@ -1,0 +1,80 @@
+.article-tweet {
+  border: 2px solid black;
+  /* TRouBLe */
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.widgets {
+  display: none;
+}
+
+.article-tweet:hover {
+  box-shadow: 10px 5px 5px grey;
+}
+
+.article-tweet:hover .tweet {
+  font-weight: 700;
+}
+
+.article-tweet:hover .user-handle {
+  opacity: 0.9;
+}
+
+.article-tweet:hover .widgets {
+  display: inline;
+}
+
+.tweet-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-family: "Source Sans Pro", sans-serif;
+  background-image: none;
+  background-color: #f4f1ec;
+  height: 2.3em;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header-img {
+  height: 45px;
+  width: 45px;
+  margin-right: 15px;
+}
+
+.user-handle {
+  opacity: 0.5;
+}
+
+.tweet-text {
+  border: none;
+  border-bottom: 3px solid black;
+  justify-content: center;
+  padding-left: 40px;
+}
+
+.tweet-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.tweet-footer p {
+  margin: 2px;
+  padding-top: 2px;
+  font-size: 15px;
+}
+.footer-img {
+  height: 20px;
+  width: 20px;
+}
