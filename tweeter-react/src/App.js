@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { Navigation } from "./components/Navigation";
 import { Profile } from "./components/Profile";
 import { TweetForm } from "./components/TweetForm";
 import { Tweet } from "./components/Tweet";
 
-const tweetsData = [
+const initialTweetData = [
   {
     name: "Oluwatobi Bello",
     handle: "@Darkister",
@@ -37,7 +37,8 @@ const tweetsData = [
 ];
 
 function App() {
-  const tweets = tweetsData.map((tweetData, index) => {
+  const [tweetData, setTweetData] = useState(initialTweetData);
+  const tweets = tweetData.map((tweetData, index) => {
     return (
       <Tweet
         key={index}
@@ -49,8 +50,21 @@ function App() {
       />
     );
   });
+
+  const addNewTweet = () => {
+    const newTweet = {
+      name: "Bola Aransiola",
+      handle: "@Hafsoh",
+      profile_image: "https://i.imgur.com/73hZDYK.png",
+      text: "Hello World",
+      date: "1 hour ago",
+    };
+
+    setTweetData([newTweet, ...tweetData]);
+  };
+
   return (
-    <div className="main-container">
+    <div className="main-container" onClick={addNewTweet}>
       <Navigation />
       <Profile />
       <main class="container">
